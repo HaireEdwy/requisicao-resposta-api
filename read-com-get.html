@@ -1,0 +1,25 @@
+<script>
+    const requisicao  = new Request('http://localhost.3000/produtos');
+
+    fetch(requisicao)
+        .then(resposta => resposta.json())
+        .then(resposta => {
+
+            for(let i=0; i < resposta.length; i++) {
+                const ul = document.creatElement('ul');
+
+                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].id;
+                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].descricao;
+                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].pecio;
+                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].id;
+                
+                document.querySelector('#listaProdutos').appendChild('ul');
+
+            }
+
+            document.querySelector('#listaProdutos').innerHTML = resposta;
+
+        })
+</script>
+
+*/incluso script de hoje, falta incluir html de hoje/*
