@@ -1,25 +1,53 @@
-<script>
-    const requisicao  = new Request('http://localhost.3000/produtos');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-    fetch(requisicao)
-        .then(resposta => resposta.json())
-        .then(resposta => {
+<html>
+    <body>
+        <header>
+            <a href="./">home</a>
+            <h1>Read com GET</h1>
+        </header>
 
-            for(let i=0; i < resposta.length; i++) {
-                const ul = document.creatElement('ul');
-
-                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].id;
-                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].descricao;
-                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].pecio;
-                ul.appendChild(document.creatElement('li')).innerHTML = resposta[i].id;
-                
-                document.querySelector('#listaProdutos').appendChild('ul');
-
-            }
-
-            document.querySelector('#listaProdutos').innerHTML = resposta;
-
-        })
-</script>
-
-*/incluso script de hoje, falta incluir html de hoje/*
+        <div id="listaProdutos"></div>
+        <script>
+            const requisicao  = new Request('http://localhost.3000/produtos');
+        
+            fetch(requisicao)
+                .then(resposta => resposta.json())
+                .then(resposta => {
+        
+                    for(let i=0; i < resposta.length; i++) {
+                        const ul = document.creatElement('ul');
+        
+                        ul
+                            .appendChild(document.creatElement('li'))
+                            .innerHTML = resposta[i].id;
+                        ul
+                            .appendChild(document.creatElement('li'))
+                            .innerHTML = resposta[i].descricao;
+                        ul
+                            .appendChild(document.creatElement('li'))
+                            .innerHTML = resposta[i].peco;
+                        ul
+                            .appendChild(document.creatElement('li'))
+                            .innerHTML = resposta[i].id;
+                        
+                        document
+                            .querySelector('#listaProdutos')
+                            .appendChild('ul');
+        
+                    }
+        
+                    document.querySelector('#listaProdutos').innerHTML = resposta;
+        
+                })
+        </script>
+        
+    </body>
+</html>
