@@ -8,11 +8,7 @@
 </head>
 
 <body>
-
-    <html>
-
-    <body>
-        <header>
+    <header>
         <form actions="" method="post">
 
             <label for="id">ID:</label>
@@ -33,30 +29,33 @@
         <script>
 
             document.querySelector('#btCadastrar').addEventListener('click',
-            () => {
+                () => {
 
-               const dados = {
-                    'id': null,
-                    'descricao': document.querySelector('#descricao').value,
-                    'preco': document.querySelector('#preco').value
-                }
+                    const dados = {
+                        'id': null,
+                        'descricao': document.querySelector('#descricao').value,
+                        'preco': document.querySelector('#preco').value
+                    }
 
-                fetch('http://localhost:3000/produtos', {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify(dados)
-                })
+                    fetch('http://localhost:3000/produtos', {
+                        method: 'POST',
+                        headers: {
+                            'Content-type': 'application/json'
+                        },
+                        body: JSON.stringify(dados)
+                    })
 
-            });
-            
+                        .then(resposta => {
+                            console.log(resposta)
+                        })
+
+                });
+
             fetch('http://localhost:3000/produtos', {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
                 }
-
             })
                 .then(resposta => resposta.json())
                 .then(resposta => {
@@ -79,12 +78,13 @@
                         document
                             .querySelector('#listaProdutos')
                             .appendChild(ul);
-
                     }
 
                 })
+
         </script>
 
-    </body>
+    </header>
+</body>
 
-    </html>
+</html>
