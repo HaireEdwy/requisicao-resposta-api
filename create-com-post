@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação com APIs | Read com GET</title>
+    <title>Interação com APIs | Create com POST</title>
 </head>
 
 <body>
@@ -13,8 +13,20 @@
 
     <body>
         <header>
-            <a href="./">home</a>
-            <h1>Read com GET</h1>
+        <form actions="" method="post">
+
+            <label for="id">ID:</label>
+            <input type="text" id=id disabled><br>
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao"><br>
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="descricao"><br>
+
+            <button type="button">Cadastrar</button>
+
+        </form>
         </header>
 
         <div id="listaProdutos"></div>
