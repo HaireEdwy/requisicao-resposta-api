@@ -21,7 +21,7 @@
 
         <script>
             
-            fetch('http://localhost.3000/produtos', {
+            fetch('http://localhost:3000/produtos', {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
@@ -31,31 +31,25 @@
                 .then(resposta => {
 
                     for (let i = 0; i < resposta.length; i++) {
-                        const ul = document.creatElement('ul');
+                        const ul = document.createElement('ul');
 
                         ul
-                            .appendChild(document.creatElement('li'))
+                            .appendChild(document.createElement('li'))
                             .innerHTML = resposta[i].id;
 
                         ul
-                            .appendChild(document.creatElement('li'))
+                            .appendChild(document.createElement('li'))
                             .innerHTML = resposta[i].descricao;
 
                         ul
-                            .appendChild(document.creatElement('li'))
-                            .innerHTML = resposta[i].peco;
-
-                        ul
-                            .appendChild(document.creatElement('li'))
-                            .innerHTML = resposta[i].id;
+                            .appendChild(document.createElement('li'))
+                            .innerHTML = resposta[i].preco;
 
                         document
                             .querySelector('#listaProdutos')
-                            .appendChild('ul');
+                            .appendChild(ul);
 
                     }
-
-                    document.querySelector('#listaProdutos').innerHTML = resposta;
 
                 })
         </script>
