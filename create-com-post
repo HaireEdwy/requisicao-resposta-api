@@ -27,17 +27,36 @@
             <button type="button">Cadastrar</button>
 
         </form>
-        </header>
 
         <div id="listaProdutos"></div>
 
         <script>
+
+            document.querySelector('#btCadastrar').addEventListener('click',
+            () => {
+
+               const dados = {
+                    'id': null,
+                    'descricao': document.querySelector('#descricao').value,
+                    'preco': document.querySelector('#preco').value
+                }
+
+                fetch('http://localhost:3000/produtos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                })
+
+            });
             
             fetch('http://localhost:3000/produtos', {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
                 }
+
             })
                 .then(resposta => resposta.json())
                 .then(resposta => {
