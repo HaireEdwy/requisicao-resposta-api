@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação com APIs | Update com PUT</title>
+
+    <title>Interação com APIs | Update com Put</title>
 </head>
 
 <body>
-    <header>
-        <h1>Update com PUT</h1>
-    </header>
+    <div class="box-father">
+        <div class="box-header">
+            <header class="page-title-Put">
+                <h1>Update com PUT</h1>
+            </header>
+        </div>
 
-    <form action="" method="">
+        <form class="box-form" action=" " method="post">
 
-        <label for="id">ID:</label>
-        <input type="text" id="id"><br>
+            <h1>Alteração de Produtos</h1>
 
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao"><br>
+            <label class="label-text" for="id">ID</label>
+            <input class="input-placeholder" text id="id" placeholder="Digite o ID do produto">
 
-        <label for="preco">Preço:</label>
-        <input type="text" id="preco"><br>
+            <label class="label-text" for="descricao">Descrição </label>
+            <input class="input-placeholder" type="text" id="descricao" placeholder="Digite a descrição do produto">
 
-        <button type="button" id="btAtualizar">Atualizar</button>
+            <label class="label-text" for="preco">Preço</label>
+            <input class="input-placeholder" type="text" id="preco" placeholder="Digite o preço do produto">
 
-    </form>
+            <div class="containerButton">
+                <div>
+                    <button type="button" id="btAtualizar">Atualizar</button>
+                </div>
+                <div>
+                    <button type="button" id="btCancelar">Cancelar</button>
+                </div>
+            </div>
 
-    <div id="listaProdutos"></div>
+        </form>
+        <div class="box-product">
+            <h1 class="titleListaProdutos">Lista de Produtos</h1>
+
+            <div id="listaProdutos"></div>
+        </div>
+
+    </div>
     
     <script>
 
         document.querySelector('#btAtualizar').addEventListener('click', () => {
 
             const dados = {
-                'id': null,
+                // 'id': null,
                 'descricao': document.querySelector('#descricao').value,
                 'preco': document.querySelector('#preco').value
             }
 
             const id = document.querySelector('#id').value;
-            // {} em inglês = 'curly braces'
-            fetch(`http://localhost:3000/produtos/${id}`, {
+            //ATUALIZA OS PRODUTOS   
+            fetch(`http://localhost:3000/produtos/${id}`, { //chama o parametro com o ${}, {} chaves em ingles = curly braces
                 method: 'PUT',
                 headers: {
-                    'Content-type': 'application/json'
+                    'content-type': 'application/json'
                 },
                 body: JSON.stringify(dados)
             })
-            .then(resposta => {
-                if(resposta.ok) {
-                    alert('Produto atualizado');
-                    location.reload(); // jeito porcão, depois vamos melhorar (promise)
-                }
-            });
+                .then(resposta => {
+                    if (resposta.ok) {
+                        alert('Produto Atualizado');
+                        location.reload(); // jeito porcão, depois vamos melhorar(promise)
+                    }
+                });
 
         });
-
-        // Busca os produtos
+        // BUSCA OS PRODUTOS
         fetch('http://localhost:3000/produtos', {
             method: 'GET',
             headers: {
-                'Content-type': 'application/json'
+                'content-type': 'application/json'
             }
         })
             .then(resposta => resposta.json())
             .then(resposta => {
-                
-                for(let i = 0; i < resposta.length; i++) {
+
+                for (let i = 0; i < resposta.length; i++) {
 
                     const ul = document.createElement('ul');
-                    ul.classList.add('produto');
 
                     ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
                     ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
                     ul.appendChild(document.createElement('li')).innerHTML = resposta[i].preco;
-                    
-                    document.querySelector('#listaProdutos').appendChild(ul);
-                }
-                
-            });
-    </script>
 
+
+                    document.querySelector('#listaProdutos').appendChild(ul);
+
+                }
+
+            });
+
+    </script>
     <script src="./assets/scripts/estilos.js"></script>
-    <script src="./assets/scripts/navbar.js"></script>
+    <script src="./assets/scripts/navBar.js"></script>
+
 </body>
 
 </html>
