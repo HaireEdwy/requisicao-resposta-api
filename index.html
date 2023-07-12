@@ -1,73 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requisição e Respostas via API</title>
-    <script src="./pagina.js"></script>
-
+    <title>Interação com APIs</title>
 </head>
 <body>
-    <header class="page-title">
-        <h1>Requisição e Respostas via API</h1>
+    <header>
+        <a href="javascript:void(0)">Home</a>
+        <h1>Interação com APIs</h1>
     </header>
-    <!-- <div id="resposta">
 
-    </div> -->
-    <div class="minhaClasseDiv">
-        <p>
-            <span></span>
-            <img id="gif"  alt="">
-        </p>
-    </div>
-    <button type="button" id="botao">Botão</button>
+    <h2>Requisição e Resposta</h2>
+    <p>No contexto do HTTP, uma requisição é um pedido feito por um cliente (como um navegador web) a um servidor para obter um recurso específico. Ela inclui informações como o método da requisição (por exemplo, GET, POST), a URL do recurso solicitado e, opcionalmente, dados adicionais no corpo da requisição. Por outro lado, uma resposta é a mensagem retornada pelo servidor em resposta a uma requisição, contendo informações como o status da resposta (por exemplo, 200 para sucesso, 404 para recurso não encontrado), cabeçalhos com metadados e, opcionalmente, dados no corpo da resposta, que podem ser HTML, JSON ou outros formatos, dependendo do tipo de recurso solicitado.</p>
 
-    <script>
-        function toggleGif(){
-            const toggleGif = document.querySelector('#gif');
-            //toggle siginifica alterna
-            if(toggleGif.hasAttribute('disabled')){
-                toggleGif.removeAttribute('disabled');
-                botao.innerHTML = 'Remover gif';
-           
-            } else {
-                toggleGif.setAttribute('disabled','');/*setAttribute define nome e valor do atributo*/
-                botao.innerHTML = 'Aplicar gif';
-                
-            }
-        }
-        // document.querySelector('#botao') da para usar as duas opçoes (querySelector que usa o # ou getElementById),uma ou outra. 
-       const botao = document.querySelector('#botao');
-       botao.addEventListener('click', toggleGif);
+    <h3>Operações com os métodos HTTP</h3>
+    <ul>
+        <li><a href="./create-com-post.html">Create com POST</a></li>
+        <li><a href="./read-com-get.html">Read com GET</a></li>
+        <li><a href="./update-com-put.html">Update com PUT</a></li>
+        <li><a href="./delete-com-delete.html">Delete com DELETE</a></li>
+    </ul>
 
-
-        const requisicao = new Request('http://localhost:3000/produtos');
-
-        fetch(requisicao)
-            .then(resposta => resposta.json())
-            .then(resposta => {
-                
-                for(let i = 0; i < 3; i++){
-
-                    let linha = `<li>${resposta[i].id}</li>`;
-                    linha += `<li>${resposta[i].descricao}</li>`;
-                    linha += `<li>${resposta[i].preco}</li>`;
-
-                    const ul = document.createElement("ul");
-
-                    document.querySelector(`#resposta`).appendChild(ul).innerHTML = linha;
-
-                }
-        });
-        document.querySelector('[type=button]').addEventListener('click',() =>{
-
-        document.querySelector("#gif").setAttribute('src','https://media.tenor.com/XWr6vfqH7WEAAAAC/tentando-n%C3%A3o-rir-risada.gif');
-        
-    });
-    </script>
+    <h2>Criando uma API fake com o JSON Server</h2>
+    <p>Consulte a documentação completa do projeto JSON Sever em: <a href="https://github.com/typicode/json-server">https://github.com/typicode/json-server</a></p>
 
     <script src="./assets/scripts/estilos.js"></script>
-    <script src="./assets/scripts/navBar.js"></script>
-
-    </body>
+    
+</body>
 </html>
