@@ -1,6 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat+Alternates:wght@700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .produto {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     list-style: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+
+
+}
+
+.estilo-titulo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-shadow: 1px 1px;
+    border-bottom: 2px solid #000000;
+
+}
+
+.estilo-titulo h1 {
+    background-color: #DFD7BF;
+    color: #3F2305;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border-bottom: 2px solid #000000;
+    text-shadow: 1px 1px;
+
+}
+
+#listaProdutos {
+    background-color: #F2EAD3;
+    border-radius: 10px;
+    border-bottom: 2px solid #000000;
+
+}
+
+#listaProdutos li {
+    display: flex;
+    align-items: center;
+}
+
+#listaProdutos ul {
+    width: 1500px;
+    line-height: 43px;
+    flex-direction: initial;
+    border-bottom: 1px solid #000;
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* --Estilização Update com PUT-- */
+
+.box-form {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 439px;
+    display: flex;
+    align-items: center;
+}
+
+.box-form h1 {
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 15px;
+}
+
+.containerButton {
+   display: flex;
+   align-items: center;
+}
+
+#btAtualizar {
+    width: 167px;
+    height: 46px;
+    border-radius: 4px;
+    background: #48A4FA;
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 4px;
+    background: #48A4FA;
+    margin: 28px;
+}
+
+#btCancelar {
+    width: 118px;
+    height: 46px;
+    border-radius: 4px;
+    background: #F59999;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.box-father {
+    background: #FEFFE4;
+    width: 100%;
+    height: 1024px;
+}
+
+
+.box-father form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.page-Title-Put {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-Title-Put h1 {
+    color: #000;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 27px;
+}
+
+#id {
+    width: 304px;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #E3E2E2;
+    margin: 15px;
+}
+
+#descricao, #preco {
+    width: 304px;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #FEFFE4;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 15px;
+}
+
+.label-style {
+    display: flex;
+    align-self: flex-start;
+    padding-inline: 4rem;
+
 }
