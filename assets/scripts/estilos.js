@@ -7,7 +7,7 @@ reset.href = './assets/styles/reset.css';
 // <link rel="stylesheet" href="./assets/styles/styles.css">
 const style = document.createElement('link');
 style.rel = 'stylesheet'; // style.setAttribute('rel', 'stylesheet');
-style.href = './assets/styles/style.css';
+style.href = './assets/styles/styles.css';
 
 // <link rel="stylesheet" href="./assets/styles/print.css" media="print">
 const print = document.createElement('link');
