@@ -79,16 +79,17 @@ body {
     font-weight: 400;
     line-height: normal;
     padding: 15px;
-}
+    }
 
 .containerButton {
    display: flex;
    align-items: center;
+   margin: 100%;
 }
 
 #btAtualizar {
-    width: 167px;
-    height: 46px;
+    width: 200px;
+    height: 60px;
     border-radius: 4px;
     background: #48A4FA;
     color: #FFF;
@@ -100,15 +101,16 @@ body {
     line-height: normal;
     border-radius: 4px;
     background: #48A4FA;
-    margin: 28px;
+    
 }
 
 #btCancelar {
-    width: 118px;
-    height: 46px;
+    width: 200px;
+    height: 60px;
     border-radius: 4px;
     background: #F59999;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .box-father {
