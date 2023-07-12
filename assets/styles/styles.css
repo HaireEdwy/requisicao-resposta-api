@@ -90,7 +90,7 @@ body {
 }
 
 #btAtualizar {
-    width: 200px;
+    width: 150px;
     height: 60px;
     border-radius: 4px;
     background: #48A4FA;
@@ -101,17 +101,22 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-radius: 4px;
-    background: #48A4FA;
-    
+    margin: 12px;
 }
 
 #btCancelar {
-    width: 200px;
+    width: 150px;
     height: 60px;
     border-radius: 4px;
     background: #F59999;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
 }
 
