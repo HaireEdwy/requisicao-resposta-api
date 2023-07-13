@@ -50,6 +50,8 @@ body {
     align-items: center;
 }
 
+
+
 #listaProdutos ul {
     width: 1500px;
     line-height: 43px;
@@ -83,41 +85,39 @@ body {
     padding: 15px;
     }
 
+.box-product h1 {
+    font-size: 29pt;
+    font-weight: 600;
+    padding-inline: 205px;
+}    
+
 .containerButton {
    display: flex;
    align-items: center;
-   margin: 100%;
+   margin: 50%;
+}
+
+#btAtualizar, #btCancelar {
+    width: 150px;
+    height: 60px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 7px;
 }
 
 #btAtualizar {
-    width: 150px;
-    height: 60px;
-    border-radius: 4px;
     background: #48A4FA;
     color: #FFF;
-    text-align: center;
-    font-family: Ubuntu;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 12px;
 }
-
 #btCancelar {
-    width: 150px;
-    height: 60px;
-    border-radius: 4px;
     background: #F59999;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-    text-align: center;
-    font-family: Ubuntu;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
+    color: #000;
 }
 
 .box-father {
@@ -149,24 +149,16 @@ body {
     font-weight: 400;
     line-height: normal;
     margin: 27px;
+    font-family: 'Ubuntu';
 }
 
-#id {
+#id, #descricao, #preco {
     width: 304px;
     height: 34px;
     border-radius: 4px;
     border: 1px solid #000;
-    background: #E3E2E2;
-    margin: 15px;
-}
-
-#descricao, #preco {
-    width: 304px;
-    height: 34px;
-    border-radius: 4px;
-    border: 1px solid #000;
-    background: #FEFFE4;
-    color: #000;
+    background: #fff;
+    font-style:italic;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -178,5 +170,17 @@ body {
     display: flex;
     align-self: flex-start;
     padding-inline: 4rem;
+
+}
+
+.lable-text {
+    display: flex;
+    align-self: flex-start;
+    padding-inline: 4rem;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.title-listaProdutos {
 
 }
