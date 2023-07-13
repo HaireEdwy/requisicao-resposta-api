@@ -15,26 +15,34 @@
         <h1>Update com PUT</h1>
     </header>
 
-    <form action=" method">
+    <form class="box-form" action= "" method= "post">
 
-        <div>
-            <label for="id">ID:</label><br>
-            <input class="input-placeholder" type="text" id="id" placeholder="digite o ID do produto">
-        </div>
+        <column>
+            <h1>Alteração de Produtos</h1>
+         
+            <section>
+                <div>
+                    <label for="id">ID:</label><br>
+                </div>
+                <input class="input-placeholder" type="text" id="id"
+                    placeholder="digite o ID do produto">
+                
+        
+                <div>
+                    <label for="descricao">Descrição:</label><br>
+                </div>
+                <input class="input-placeholder" type="text" id="descricao" placeholder="digite a descrição do produto">
+        
+                <div>
+                    <label for="preco">Preço:</label><br>
+                </div>
 
-        <div>
-            <label for="descricao">Descrição:</label><br>
-        <input class="input-placeholder" type="text" id="descricao" placeholder="digite a descrição do produto"></div>
-
-        <div>
-            <label for="preco">Preço:</label><br>
-            <input class="input-placeholder" type="text" id="preco" placeholder="digite o preço do produto">
-        </div>
-
-        <div>
+                <input class="input-placeholder" type="text" id="preco" placeholder="digite o preço do produto">
+            </section>
+        
             <button type="button" id="btAtualizar">Atualizar</button>
             <button class="input-placeholder" type="button" id="btCancelar">Cancelar</button>
-        </div>
+        </column>
     </form>
     </section>
 
